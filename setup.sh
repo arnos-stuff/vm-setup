@@ -17,6 +17,9 @@ brew install z
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
 brew install gh
 
+
+HOMEBREW=/home/linuxbrew/.linuxbrew
+
 cat .ref.zshrc >> $HOME/.zhrc
 cat .ref.zshenv >> $HOME/.zshenv
 
@@ -26,9 +29,6 @@ echo ". /home/linuxbrew/.linuxbrew/etc/profile.d/z.sh" >> $HOME/.zshrc
 exec zsh &&
 apt update
 apt install npm
-
-# poetry
-curl -sSL https://install.python-poetry.org | python3 -
 
 # micro editor with plugins
 brew install micro
@@ -40,7 +40,15 @@ micro -plugin install filemanager
 
 ## add this to your .zshrc for zi
 
+brew install python3
+
+echo 'path+=/home/linuxbrew/.linuxbrew/opt/python@3.11/libexec/bin' >> $HOME/.zshenv
+
 echo "source ~/.zi/bin/zi.zsh" >> $HOME/.zshrc
 
-## eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/themes/arno-pure.omp.json)"
+eval "$(oh-my-posh init zsh --config $BREWHOME/opt/oh-my-posh/themes/arno-pure.omp.json)"
+
+curl -sSL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh > miniconda-install.sh
+
+/bin/bash miniconda-install.sh -b
 
