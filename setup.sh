@@ -1,4 +1,5 @@
 #!/bin/bash
+
 apt upgrade -y
 apt install vim -y
 apt install apt-utils -y
