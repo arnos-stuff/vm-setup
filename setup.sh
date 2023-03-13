@@ -87,3 +87,9 @@ eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/arno-pur
 curl -sSL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh > miniconda-install.sh
 
 /bin/bash miniconda-install.sh -b
+
+conda init zsh
+
+exec zsh &&
+
+conda env create -n VM --file condaVM.yml

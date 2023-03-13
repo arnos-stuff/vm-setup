@@ -1,0 +1,28 @@
+name: directml
+channels:
+  - defaults
+dependencies:
+  - tqdm
+  - tensorboard
+  - numpy
+  - matplotlib
+  - pyyaml
+  - ipykernel
+  - ipywidgets
+  - jupyter
+  - plotly
+  - chart-studio=1.1.0
+  - rich
+  - gxx_linux-64
+  - pandas
+  - polars
+  - mbedtls
+  - juliaup
+  - jupyter-cache
+  - pyqt
+  - jupyter_console
+  - nomkl
+  - mamba
+  - poetry
+prefix: /home/arnov/.conda/envs/directml
+
