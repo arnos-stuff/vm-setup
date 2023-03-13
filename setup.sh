@@ -8,6 +8,9 @@ apt update -y
 apt install build-essentials -y
 apt install ruby -y
 
+apt install postgresql postgresql-contrib
+systemctl start postgresql.service
+
 # use your creds
 git config --global user.email "bcda0276@gmail.com"
 git config --global user.name "arnos-stuff"
